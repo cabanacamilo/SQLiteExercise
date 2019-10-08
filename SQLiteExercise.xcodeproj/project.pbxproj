@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F7482AA234CF4B9008AEDB5 /* Heroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7482A9234CF4B9008AEDB5 /* Heroes.swift */; };
+		2F7482AC234CF6AD008AEDB5 /* TableViewHeroesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7482AB234CF6AD008AEDB5 /* TableViewHeroesCell.swift */; };
+		2F7482AE234CF6C2008AEDB5 /* ViewHeroesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7482AD234CF6C2008AEDB5 /* ViewHeroesController.swift */; };
 		2FBC4075234A835000FE2064 /* SQLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBC4074234A835000FE2064 /* SQLite.m */; };
 		2FBC4076234A87BE00FE2064 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBC4071234A826800FE2064 /* libsqlite3.tbd */; };
 		2FFDEEAE2349805C00196DCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFDEEAD2349805C00196DCF /* AppDelegate.swift */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F7482A9234CF4B9008AEDB5 /* Heroes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heroes.swift; sourceTree = "<group>"; };
+		2F7482AB234CF6AD008AEDB5 /* TableViewHeroesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHeroesCell.swift; sourceTree = "<group>"; };
+		2F7482AD234CF6C2008AEDB5 /* ViewHeroesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHeroesController.swift; sourceTree = "<group>"; };
 		2FBC4071234A826800FE2064 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		2FBC4073234A834F00FE2064 /* SQLiteExercise-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SQLiteExercise-Bridging-Header.h"; sourceTree = "<group>"; };
 		2FBC4074234A835000FE2064 /* SQLite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLite.m; sourceTree = "<group>"; };
@@ -80,6 +86,9 @@
 				2FFDEEB62349805C00196DCF /* SQLiteExercise.xcdatamodeld */,
 				2FBC4074234A835000FE2064 /* SQLite.m */,
 				2FBC4073234A834F00FE2064 /* SQLiteExercise-Bridging-Header.h */,
+				2F7482A9234CF4B9008AEDB5 /* Heroes.swift */,
+				2F7482AB234CF6AD008AEDB5 /* TableViewHeroesCell.swift */,
+				2F7482AD234CF6C2008AEDB5 /* ViewHeroesController.swift */,
 			);
 			path = SQLiteExercise;
 			sourceTree = "<group>";
@@ -167,8 +176,11 @@
 			files = (
 				2FBC4075234A835000FE2064 /* SQLite.m in Sources */,
 				2FFDEEB22349805C00196DCF /* ViewController.swift in Sources */,
+				2F7482AE234CF6C2008AEDB5 /* ViewHeroesController.swift in Sources */,
 				2FFDEEB82349805C00196DCF /* SQLiteExercise.xcdatamodeld in Sources */,
+				2F7482AA234CF4B9008AEDB5 /* Heroes.swift in Sources */,
 				2FFDEEAE2349805C00196DCF /* AppDelegate.swift in Sources */,
+				2F7482AC234CF6AD008AEDB5 /* TableViewHeroesCell.swift in Sources */,
 				2FFDEEB02349805C00196DCF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
