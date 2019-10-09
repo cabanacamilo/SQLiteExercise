@@ -70,7 +70,6 @@ class ViewController: UIViewController {
         
     }
     
-    
     @IBAction func listButton(_ sender: Any) {
         var selectStatement: OpaquePointer?
         let selectSql = "select * from Heroes"
@@ -85,7 +84,6 @@ class ViewController: UIViewController {
                 hero.name = stringName
                 heroes.append(hero)
             }
-            print(heroes[1].name)
         }
         sqlite3_finalize(selectStatement)
     }
@@ -120,6 +118,54 @@ class ViewController: UIViewController {
         alert.addAction(actionTwo)
         present(alert, animated: true, completion: nil)
     }
+    
+    @IBAction func updateButton(_ sender: Any) {
+        let alert = UIAlertController(title: "Update", message: "Update a Hero", preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.textAlignment = .right
+            textField.placeholder = "ID"
+        }
+        alert.addTextField { (textField) in
+            textField.placeholder = "Name"
+            textField.textAlignment = .right
+        }
+        let actionOne = UIAlertAction(title: "Update", style: .default) { (actionOne) in
+            let id = alert.textFields?[0].text
+            let name = alert.textFields?[1].text
+            var statement: OpaquePointer?
+            let updateSQL = "UPDATE heroes SET name = '\(name!)' WHERE id = \(id!);"
+            if sqlite3_prepare_v2(self.dbPointer, updateSQL, -1, &statement, nil) == SQLITE_OK {
+              if sqlite3_step(statement) == SQLITE_DONE {
+                print("Successfully updated row.")
+              } else {
+                print("Could not update row.")
+              }
+            } else {
+              print("UPDATE statement could not be prepared")
+            }
+            sqlite3_finalize(statement)
+        }
+        let actionTwo = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(actionOne)
+        alert.addAction(actionTwo)
+        present(alert, animated: true, completion: nil)
+        
+//        let updateStatementString = "UPDATE heroes SET name = 'Chris' WHERE id = 10;"
+//        var updateStatement: OpaquePointer? = nil
+//        if sqlite3_prepare_v2(dbPointer, updateStatementString, -1, &updateStatement, nil) == SQLITE_OK {
+//            if sqlite3_step(updateStatement) == SQLITE_DONE {
+//                print("Successfully updated row.")
+//            } else {
+//                print("Could not update row.")
+//            }
+//
+//        } else {
+//            print("UPDATE statement could not be prepared")
+//
+//        }
+//        sqlite3_finalize(updateStatement)
+    }
+    
     
 }
 

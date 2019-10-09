@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="76" translatesAutoresizingMaskIntoConstraints="NO" id="o6n-LB-uEK">
-                                <rect key="frame" x="161" y="354" width="92" height="242"/>
+                                <rect key="frame" x="161" y="301" width="92" height="348"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2S-IK-jof">
                                         <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
@@ -38,6 +38,13 @@
                                         <state key="normal" title="Delete a hero"/>
                                         <connections>
                                             <action selector="deleteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QLW-Oj-KIj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGb-Ws-wfd">
+                                        <rect key="frame" x="0.0" y="318" width="92" height="30"/>
+                                        <state key="normal" title="Update Hero"/>
+                                        <connections>
+                                            <action selector="updateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DoA-uR-JBe"/>
                                         </connections>
                                     </button>
                                 </subviews>
